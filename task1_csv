@@ -97,6 +97,7 @@ Person,Eliot Horowitz,,,0.0
 Person,Sarah Conway,,,0.0
 Person,Sark,Sarkis Agaian,https://dblp.org/pid/60/8206,0.8615384615384615
 Person,Sark,Sarker Aninda,https://dblp.org/pid/228/5108,0.8615384615384615
+Person,Sark,Sarka Pavlova,https://dblp.org/pid/221/8159,0.8615384615384615
 Person,Candy Corn Respawn Inbox,,,0.0
 Person,Arun Gupta,Arun Gupta,https://dblp.org/pid/46/3232,1.0
 Person,Paul Dix,Paul Dixon,https://dblp.org/pid/98/6312,0.96
@@ -119,9 +120,7 @@ Person,Víctor Robles,Víctor Robles,https://dblp.org/pid/r/VictorRobles,1.0
 Person,Anwar Ali,Anwar Ali,https://dblp.org/pid/69/9027,1.0
 Person,Scott Wallace,Scott Wallace,https://dblp.org/pid/04/3127,1.0
 Person,Arnaud Bailly,Arnaud Bailly,https://dblp.org/pid/22/5953,1.0
-Person,Guo Liang,Guo-Liang He,https://dblp.org/pid/194/8002,0.8962962962962963
-Person,Guo Liang,Guo-Liang Wu,https://dblp.org/pid/69/6685,0.8962962962962963
-Person,Guo Liang,Guo-Liang Xu,https://dblp.org/pid/220/8225,0.8962962962962963
+Person,Guo Liang,Guo Liang,https://dblp.org/pid/128/4318,1.0
 Person,Amar Potghan,,,0.0
 Person,Ebrahim Hegazy,,,0.0
 Person,Giuseppe De Giacomo,Giuseppe De Giacomo,https://dblp.org/pid/g/GDGiacomo,1.0
@@ -179,9 +178,7 @@ Person,Daniel OsorioLeonardo CardozoAlexis,,,0.0
 Person,OsorioLeonardo CardozoAlexis AcostaJosé,,,0.0
 Person,Ned Pajic,,,0.0
 Person,Mike Grove,,,0.0
-Person,Michael,Michael Abato,https://dblp.org/pid/93/11530,0.9076923076923076
-Person,Michael,Michael Abbey,https://dblp.org/pid/149/7931,0.9076923076923076
-Person,Michael,Michael Abebe,https://dblp.org/pid/216/4991,0.9076923076923076
+Person,Michael,Michael An,https://dblp.org/pid/136/2561,0.9400000000000001
 Person,Zaid Marji,,,0.0
 Person,David Pilato Tombé,,,0.0
 Person,Hillary Mason,,,0.0
@@ -193,14 +190,14 @@ Person,Paul Toillion,,,0.0
 Person,Michael Stonebraker,Michael Stonebraker,https://dblp.org/pid/s/MichaelStonebraker,1.0
 Person,Mike Yagley,,,0.0
 Person,Carlo Barbieri,Carlo Barbieri,https://dblp.org/pid/29/9762,1.0
-Person,David,David Abel,https://dblp.org/pid/162/9926,0.8999999999999999
-Person,David,David Abia,https://dblp.org/pid/22/11015,0.8999999999999999
+Person,David,David Ahn,https://dblp.org/pid/98/4643,0.9111111111111111
+Person,David,David Ash,https://dblp.org/pid/14/823,0.9111111111111111
+Person,David,David Bao,https://dblp.org/pid/124/5284,0.9111111111111111
 Person,Tugdual,Tugdual Sarazin,https://dblp.org/pid/152/8060,0.8933333333333333
 Person,David Pilato Tombé,,,0.0
 Person,Jeremy Likness,,,0.0
 Person,Vladimir de Turckheim,,,0.0
-Person,Sumedh,Sumedh Guha,https://dblp.org/pid/200/2768,0.9090909090909091
-Person,Sumedh,Sumedh Kale,https://dblp.org/pid/232/7691,0.9090909090909091
+Person,Sumedh,Sumedha,https://dblp.org/pid/14/4145,0.9714285714285714
 Person,Eric David Benari,,,0.0
 Person,Ben Kepes,,,0.0
 Person,Dave Vellante,,,0.0
@@ -210,7 +207,7 @@ Person,Pramod Sadalage,Pramod Sadalage,https://dblp.org/pid/19/6430,1.0
 Person,Sasha Goldshtein,,,0.0
 Person,DevWeek,,,0.0
 Person,Edgar F. Codd,E. F. Codd,https://dblp.org/pid/c/EFCodd,0.8776923076923078
-Person,K Smith,Karen Smith-Gratto,https://dblp.org/pid/29/6530,0.8166666666666667
+Person,K Smith,K. Smith,https://dblp.org/pid/33/1889,0.9624999999999999
 Person,Hadoop ecosystem,,,0.0
 Person,Cassandra ecosystem,,,0.0
 Person,Spencer McIntyre,,,0.0
@@ -235,7 +232,7 @@ Person,Mike Lively,,,0.0
 Person,Stefan Groschupf,,,0.0
 Person,Ming Chow,Ming Chow,https://dblp.org/pid/28/7587,1.0
 Person,Stewart Smith,Stewart Smith,https://dblp.org/pid/23/6815,1.0
-Person,Miguel Angel,Miguel Angel Salichs,https://dblp.org/pid/12/2038,0.92
+Person,Miguel Angel,Miguel Angel,https://dblp.org/pid/123/6563,1.0
 Person,Miguel Ángel Fajardo,,,0.0
 Person,Emmanuel Bernard,Emmanuel Bernard,https://dblp.org/pid/203/0783,1.0
 Person,Haytham Abdel Moneim,,,0.0
