@@ -45,11 +45,6 @@ def dbpedia_keyword_search_api_query(query_term, type):
         print(result.find('xmlns:Label', ns).text, result.find('xmlns:URI', ns).text)
         ret.append({'Label':result.find('xmlns:Label', ns).text, 'URI': result.find('xmlns:URI', ns).text})
 
-    # entities = resp.json()['result']['hits'];
-    # if 0 < int(entities['@sent']):
-    #     for entity in entities['hit']:
-    #         ret.append(entity['info'])
-
     print('Query to DBPEDIA keyword search API with {0} and retrived {1} ressults'.format(query_term, len(ret)))
     
     return ret
@@ -103,9 +98,7 @@ def jaccard_distance_similarity(lhs, entities):
 if __name__ == '__main__':
 
     ret_format = 'json'
-
-    task_1 = []
-    task_2 = []
+    ret = []
 
     with open('input.csv') as in_file:
         csv_reader = csv.reader(in_file, delimiter=',')
@@ -113,56 +106,24 @@ if __name__ == '__main__':
         for row in csv_reader:
             if row[1] != 'Person':
                 continue
-            if row[1] == 'Person':
-                similarity = [('', '', 0.0),]            
-                entities = dblp_author_api_query(row[2], ret_format)
-                if 0 < len(entities):
-                    similarity = run_jaro_winkler_similarity(row[2], entities)
+            
+            similarity = [('', '', 0.0),]            
+            entities = dblp_author_api_query(row[2], ret_format)
+            if 0 < len(entities):
+                similarity = jaccard_distance_similarity(row[2], entities)
                 
-                if 1 < len(similarity):
-                    entities = list(map(lambda x : {'author': x[0], 'url': x[1]}, similarity))
-                    similarity = run_jaro_similarity(row[2], entities)
+            if 1 < len(similarity):
+                entities = list(map(lambda x : {'author': x[0], 'url': x[1]}, similarity))
+                similarity = run_jaro_winkler_similarity(row[2], entities)
+            
+            if 1 < len(similarity):
+                entities = list(map(lambda x : {'author': x[0], 'url': x[1]}, similarity))
+                similarity = run_jaro_similarity(row[2], entities)
+            
+            for tp in similarity:
+                ret.append([row[1], row[2], tp[0], tp[1], tp[2]])
 
-                if 1 < len(similarity):
-                    entities = list(map(lambda x : {'author': x[0], 'url': x[1]}, similarity))
-                    similarity = jaccard_distance_similarity(row[2], entities)
-                
-                # for entity in entities:
-                #     similarity = distance.jaro_winkler_similarity(row[2], entity['author'])
-                #     if max_similarity[0][2] < similarity:
-                #         max_similarity = [(entity['author'], entity['url'], similarity),]
-                #     elif max_similarity[0][2] == similarity:
-                #         max_similarity.append((entity['author'], entity['url'], similarity))
-
-                # if 1 < len(max_similarity):
-                #     max_score = 0;
-                #     jaro = [('', '', 0.0)]
-                #     for tp in max_similarity:
-                #         distance.jaro_similarity(tp[0], entity['author'])
-
-                for tp in similarity:
-                    task_1.append([row[1], row[2], tp[0], tp[1], tp[2]])
-
-            # elif row[1] in ['Organization', 'Company']:
-            #     entities = dbpedia_keyword_search_api_query(row[2], row[1])
-            #     max_similarity = [('', '', 0.0),]
-
-            #     for entity in entities:
-            #         similarity = distance.jaro_winkler_similarity(row[2], entity['Label'])
-            #         if max_similarity[0][2] < similarity:
-            #             max_similarity = [(entity['Label'], entity['URI'], similarity),]
-            #         elif max_similarity[0][2] == similarity:
-            #             max_similarity.append((entity['Label'], entity['URI'], similarity))
-
-            #     for tp in max_similarity:
-            #         task_2.append([row[1], row[2], tp[0], tp[1], tp[2]])
-
-    with open('task1_csv', mode='w') as out_file1:
-        csv_writer = csv.writer(out_file1, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        for row in task_1:
+    with open('output.csv', mode='w') as out_file:
+        csv_writer = csv.writer(out_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        for row in ret:
             csv_writer.writerow(row)
-
-    # with open('task2_csv', mode='w') as out_file2:
-    #     csv_writer = csv.writer(out_file2, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-    #     for row in task_2:
-    #         csv_writer.writerow(row)
